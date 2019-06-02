@@ -1,7 +1,8 @@
 # UserManager
 Challenge Test
 
-The solution be able to meet the following needs:
+
+    The solution be able to meet the following needs:
     - Find a user by username 
         - GET /api/Users/{username}
     - Create a user 
@@ -11,5 +12,5 @@ The solution be able to meet the following needs:
     - Update a user's email and name 
         - PUT /api/Users
     
-    Also Included GET /api/Users to return a list of all the users.
+  Also Included GET /api/Users to return a list of all the users.
 
