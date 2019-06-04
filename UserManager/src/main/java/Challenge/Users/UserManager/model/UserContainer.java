@@ -12,7 +12,7 @@ public class UserContainer {
         this.user = user;
 
         this.links = new ArrayList<UserLink>();
-
+        if(this.user == null) return;
         //Would add Auth logic here to limit options
         UserLink viewLink = new UserLink(BaseUri + "/" + user.getUsername(),"View", "GET");
         links.add(viewLink);
