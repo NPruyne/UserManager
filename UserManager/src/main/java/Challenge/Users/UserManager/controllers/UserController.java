@@ -4,6 +4,7 @@ import Challenge.Users.UserManager.interfaces.iUserService;
 import Challenge.Users.UserManager.model.User;
 import Challenge.Users.UserManager.model.UserContainer;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -39,8 +40,11 @@ public class UserController {
     }
 
     @GetMapping("/{Username}")
-    public UserContainer getUserByUsername(@PathVariable String Username){
-        return new UserContainer(userService.findUserByUserName(Username), getCompleteBaseUri());
+    public ResponseEntity<UserContainer> getUserByUsername(@PathVariable String Username){
+        User foundUser = userService.findUserByUserName(Username);
+        if(foundUser == null)
+             return ResponseEntity.status(HttpStatus.NO_CONTENT).body(null);
+        return ResponseEntity.status(HttpStatus.OK).body(new UserContainer(foundUser, getCompleteBaseUri()));
     }
 
     //Responds to requests to user base + username PUT requests, re
