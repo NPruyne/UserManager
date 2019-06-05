@@ -11,12 +11,17 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
 				"url": {
-					"raw": ""
+					"raw": "http://localhost:8080/api/Users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"Users"
+					]
 				}
 			},
 			"response": []
@@ -26,12 +31,18 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
 				"url": {
-					"raw": ""
+					"raw": "http://localhost:8080/api/Users/ppicasso",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"Users",
+						"ppicasso"
+					]
 				}
 			},
 			"response": []
@@ -41,12 +52,18 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
 				"url": {
-					"raw": ""
+					"raw": "http://localhost:8080/api/Users/ppicass",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"Users",
+						"ppicass"
+					]
 				}
 			},
 			"response": []
@@ -54,14 +71,29 @@
 		{
 			"name": "create user",
 			"request": {
-				"method": "GET",
-				"header": [],
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": ""
+					"raw": "{\n\t\"username\": \"npruyne\",\n\t\"name\": \"Nicholas Pruyne\",\n\t\"email\": \"nic@carbs.net\"\n}"
 				},
 				"url": {
-					"raw": ""
+					"raw": "http://localhost:8080/api/Users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"Users"
+					]
 				}
 			},
 			"response": []
@@ -69,14 +101,20 @@
 		{
 			"name": "Delete User",
 			"request": {
-				"method": "GET",
+				"method": "DELETE",
 				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
 				"url": {
-					"raw": ""
+					"raw": "http://localhost:8080/api/Users/vgogh",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"Users",
+						"vgogh"
+					]
 				}
 			},
 			"response": []
@@ -84,14 +122,30 @@
 		{
 			"name": "Update User",
 			"request": {
-				"method": "GET",
-				"header": [],
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": ""
+					"raw": "{\n\t\"name\": \"Fake Nicholas Pruyne\",\n\t\"email\": \"NOT_nic@carbs.net\"\n}"
 				},
 				"url": {
-					"raw": ""
+					"raw": "http://localhost:8080/api/Users/npruyne",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"Users",
+						"npruyne"
+					]
 				}
 			},
 			"response": []
