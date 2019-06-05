@@ -10,7 +10,7 @@ The solution be able to meet the following needs:
 - Delete a user 
     - DELETE /api/Users/{username}
 - Update a user's email and name 
-    - PUT /api/Users
+    - PUT /api/Users/{username}
     
   Also Included GET /api/Users to return a list of all the users.
 
